@@ -5,6 +5,7 @@ import {
   IconMail,
   IconChartBar,
   IconTrendingUp,
+  IconArrowRight,
 } from '@tabler/icons-react';
 import { StatusBadge } from '@/components';
 
@@ -34,14 +35,14 @@ export default function TaskAnalyticsPage() {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                   <IconActivity size={20} className="text-red-400" />
                   <h3 className="text-gray-700 font-normal text-sm">
                     Track your habits and build routines
                   </h3>
                 </div>
 
-                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                   <IconBrain size={20} className="text-red-400" />
                   <h3 className="text-gray-700 font-normal text-sm">
                     AI-powered task assistant
@@ -56,7 +57,7 @@ export default function TaskAnalyticsPage() {
                 <StatusBadge status="development">In Development</StatusBadge>
               </div>
 
-              <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+              <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                 <IconTarget size={20} className="text-red-400" />
                 <h3 className="text-gray-700 font-normal text-sm">
                   Set and track personal goals
@@ -71,21 +72,21 @@ export default function TaskAnalyticsPage() {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                   <IconMail size={20} className="text-red-400" />
                   <h3 className="text-gray-700 font-normal text-sm">
                     Customizable email preferences
                   </h3>
                 </div>
 
-                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                   <IconChartBar size={20} className="text-red-400" />
                   <h3 className="text-gray-700 font-normal text-sm">
                     Daily and weekly stats
                   </h3>
                 </div>
 
-                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                   <IconTrendingUp size={20} className="text-red-400" />
                   <h3 className="text-gray-700 font-normal text-sm">
                     Performance comparisons
@@ -96,9 +97,10 @@ export default function TaskAnalyticsPage() {
                 <div className="mt-6 bg-red-50 px-3 py-2 rounded-xl inline-block">
                   <a
                     href="/changelog"
-                    className="text-red-600 hover:text-red-700 font-semibold text-sm flex items-center gap-1"
+                    className="text-red-600 hover:text-red-700 font-semibold text-sm flex items-center gap-2"
                   >
-                    View Full Changelog →
+                    View Full Changelog
+                    <IconArrowRight size={16} />
                   </a>
                 </div>
               </div>
@@ -115,7 +117,7 @@ export default function TaskAnalyticsPage() {
 
         <div className="space-y-6">
           {/* FAQ Card 1 */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow cursor-pointer">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
               Is Task Analytics affiliated with Todoist?
             </h3>
@@ -127,7 +129,7 @@ export default function TaskAnalyticsPage() {
           </div>
 
           {/* FAQ Card 2 */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow cursor-pointer">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
               Is Task Analytics free?
             </h3>

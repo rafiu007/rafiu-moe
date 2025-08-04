@@ -3,17 +3,17 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { 
+import {
   IconMenu2,
   IconChartPie,
-  IconCalendar, 
-  IconBulb, 
-  IconClipboardList, 
-  IconChartBar, 
-  IconUser, 
-  IconBrain, 
-  IconFileText, 
-  IconSettings 
+  IconCalendar,
+  IconBulb,
+  IconClipboardList,
+  IconChartBar,
+  IconUser,
+  IconBrain,
+  IconFileText,
+  IconSettings,
 } from '@tabler/icons-react';
 
 const menuItems = [
@@ -37,12 +37,16 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className={`${isCollapsed ? 'w-16' : 'w-[15%] min-w-[200px]'} bg-gray-100 h-screen flex flex-col transition-all duration-300 ease-in-out`}>
+    <aside
+      className={`${
+        isCollapsed ? 'w-16' : 'w-[15%] min-w-[200px]'
+      } bg-gray-100 h-screen flex flex-col transition-all duration-300 ease-in-out`}
+    >
       {/* Menu Icon */}
       <div className="p-4">
-        <button 
+        <button
           onClick={toggleSidebar}
-          className="text-gray-600 hover:text-gray-900 transition-colors"
+          className="text-gray-600 hover:text-gray-900 transition-colors cursor-pointer"
         >
           <IconMenu2 size={20} />
         </button>
@@ -52,16 +56,17 @@ const Sidebar = () => {
       <nav className="flex-1">
         {menuItems.map(({ href, label, icon: Icon }) => {
           const isActive = pathname === href;
-          
+
           return (
             <Link
               key={href}
               href={href}
               className={`
                 flex items-center gap-3 px-4 py-3 text-sm font-medium transition-all duration-200
-                ${isActive 
-                  ? 'text-white bg-red-500' 
-                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
+                ${
+                  isActive
+                    ? 'text-white bg-red-500'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
                 }
                 ${isCollapsed ? 'justify-center' : ''}
               `}
@@ -69,9 +74,7 @@ const Sidebar = () => {
             >
               <Icon size={18} />
               {!isCollapsed && (
-                <span className="transition-opacity duration-200">
-                  {label}
-                </span>
+                <span className="transition-opacity duration-200">{label}</span>
               )}
             </Link>
           );
