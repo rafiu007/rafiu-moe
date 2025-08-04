@@ -18,11 +18,11 @@ import {
 
 const menuItems = [
   {
-    href: '/task-analytics',
+    href: '/',
     label: 'Task Analytics',
     icon: IconChartPieFilled,
   },
-  { href: '/', label: 'Today', icon: IconCalendarFilled },
+  { href: '/today', label: 'Today', icon: IconCalendarFilled },
   { href: '/insights', label: 'Insights', icon: IconBulbFilled },
   { href: '/planning', label: 'Planning', icon: IconClipboardFilled },
   { href: '/analytics', label: 'Analytics', icon: IconChartAreaFilled },
