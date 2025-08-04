@@ -34,15 +34,15 @@ export default function TaskAnalyticsPage() {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-start gap-4 bg-gray-50 p-4 rounded-lg">
-                  <IconActivity size={20} className="text-pink-400 mt-1" />
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                  <IconActivity size={20} className="text-red-400" />
                   <h3 className="text-gray-700 font-normal text-sm">
                     Track your habits and build routines
                   </h3>
                 </div>
 
-                <div className="flex items-start gap-4 bg-gray-50 p-4 rounded-lg">
-                  <IconBrain size={20} className="text-red-400 mt-1" />
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                  <IconBrain size={20} className="text-red-400" />
                   <h3 className="text-gray-700 font-normal text-sm">
                     AI-powered task assistant
                   </h3>
@@ -56,8 +56,8 @@ export default function TaskAnalyticsPage() {
                 <StatusBadge status="development">In Development</StatusBadge>
               </div>
 
-              <div className="flex items-start gap-4 bg-gray-50 p-4 rounded-lg">
-                <IconTarget size={20} className="text-red-400 mt-1" />
+              <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                <IconTarget size={20} className="text-red-400" />
                 <h3 className="text-gray-700 font-normal text-sm">
                   Set and track personal goals
                 </h3>
@@ -71,32 +71,32 @@ export default function TaskAnalyticsPage() {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-start gap-4 bg-gray-50 p-4 rounded-lg">
-                  <IconMail size={20} className="text-red-400 mt-1" />
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                  <IconMail size={20} className="text-red-400" />
                   <h3 className="text-gray-700 font-normal text-sm">
                     Customizable email preferences
                   </h3>
                 </div>
 
-                <div className="flex items-start gap-4 bg-gray-50 p-4 rounded-lg">
-                  <IconChartBar size={20} className="text-pink-400 mt-1" />
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                  <IconChartBar size={20} className="text-red-400" />
                   <h3 className="text-gray-700 font-normal text-sm">
                     Daily and weekly stats
                   </h3>
                 </div>
 
-                <div className="flex items-start gap-4 bg-gray-50 p-4 rounded-lg">
-                  <IconTrendingUp size={20} className="text-pink-400 mt-1" />
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                  <IconTrendingUp size={20} className="text-red-400" />
                   <h3 className="text-gray-700 font-normal text-sm">
                     Performance comparisons
                   </h3>
                 </div>
 
-                {/* View Full Changelog inside this card */}
-                <div className="mt-6 bg-red-50 p-4 rounded-lg">
+                {/* View Full Changelog inside this card - different styling */}
+                <div className="mt-6 bg-red-50 px-3 py-2 rounded-xl inline-block">
                   <a
                     href="/changelog"
-                    className="text-red-400 hover:text-red-500 font-medium text-sm flex items-center gap-1"
+                    className="text-red-600 hover:text-red-700 font-semibold text-sm flex items-center gap-1"
                   >
                     View Full Changelog →
                   </a>
