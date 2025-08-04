@@ -1,9 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
   IconMenu2,
+  IconChartPie,
   IconCalendar, 
   IconBulb, 
   IconClipboardList, 
@@ -15,6 +17,7 @@ import {
 } from '@tabler/icons-react';
 
 const menuItems = [
+  { href: '/task-analytics', label: 'Task Analytics', icon: IconChartPie },
   { href: '/', label: 'Today', icon: IconCalendar },
   { href: '/insights', label: 'Insights', icon: IconBulb },
   { href: '/planning', label: 'Planning', icon: IconClipboardList },
@@ -27,23 +30,26 @@ const menuItems = [
 
 const Sidebar = () => {
   const pathname = usePathname();
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsCollapsed(!isCollapsed);
+  };
 
   return (
-    <aside className="w-[15%] min-w-[200px] bg-gray-100 h-screen flex flex-col">
+    <aside className={`${isCollapsed ? 'w-16' : 'w-[15%] min-w-[200px]'} bg-gray-100 h-screen flex flex-col transition-all duration-300 ease-in-out`}>
       {/* Menu Icon */}
       <div className="p-4">
-        <IconMenu2 size={20} className="text-gray-600" />
-      </div>
-
-      {/* Task Analytics Header */}
-      <div className="bg-red-500 text-white py-3 px-4">
-        <h1 className="text-base font-semibold">
-          Task Analytics
-        </h1>
+        <button 
+          onClick={toggleSidebar}
+          className="text-gray-600 hover:text-gray-900 transition-colors"
+        >
+          <IconMenu2 size={20} />
+        </button>
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 py-4">
+      <nav className="flex-1">
         {menuItems.map(({ href, label, icon: Icon }) => {
           const isActive = pathname === href;
           
@@ -52,15 +58,21 @@ const Sidebar = () => {
               key={href}
               href={href}
               className={`
-                flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors
+                flex items-center gap-3 px-4 py-3 text-sm font-medium transition-all duration-200
                 ${isActive 
-                  ? 'text-gray-900 bg-gray-200' 
-                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                  ? 'text-white bg-red-500' 
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
                 }
+                ${isCollapsed ? 'justify-center' : ''}
               `}
+              title={isCollapsed ? label : undefined}
             >
               <Icon size={18} />
-              {label}
+              {!isCollapsed && (
+                <span className="transition-opacity duration-200">
+                  {label}
+                </span>
+              )}
             </Link>
           );
         })}
