@@ -30,7 +30,7 @@ export default function TaskAnalyticsPage() {
             {/* Card 1 - Planned */}
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
               <div className="mb-8">
-                <StatusBadge status="planned">✓ Planned</StatusBadge>
+                <StatusBadge status="planned">Planned</StatusBadge>
               </div>
 
               <div className="space-y-4">
@@ -53,9 +53,7 @@ export default function TaskAnalyticsPage() {
             {/* Card 2 - In Development */}
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
               <div className="mb-8">
-                <StatusBadge status="development">
-                  ⚡ In Development
-                </StatusBadge>
+                <StatusBadge status="development">In Development</StatusBadge>
               </div>
 
               <div className="flex items-start gap-4 bg-gray-50 p-4 rounded-lg">
@@ -69,7 +67,7 @@ export default function TaskAnalyticsPage() {
             {/* Card 3 - Recently Added */}
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
               <div className="mb-8">
-                <StatusBadge status="added">✓ Recently Added</StatusBadge>
+                <StatusBadge status="added">Recently Added</StatusBadge>
               </div>
 
               <div className="space-y-4">
