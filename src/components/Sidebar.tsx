@@ -5,27 +5,31 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
   IconMenu2,
-  IconChartPie,
-  IconCalendar,
-  IconBulb,
-  IconClipboardList,
-  IconChartBar,
-  IconUser,
+  IconChartPieFilled,
+  IconCalendarFilled,
+  IconBulbFilled,
+  IconClipboardFilled,
+  IconChartAreaFilled,
+  IconUserFilled,
   IconBrain,
-  IconFileText,
-  IconSettings,
+  IconFileTextFilled,
+  IconSettingsFilled,
 } from '@tabler/icons-react';
 
 const menuItems = [
-  { href: '/task-analytics', label: 'Task Analytics', icon: IconChartPie },
-  { href: '/', label: 'Today', icon: IconCalendar },
-  { href: '/insights', label: 'Insights', icon: IconBulb },
-  { href: '/planning', label: 'Planning', icon: IconClipboardList },
-  { href: '/analytics', label: 'Analytics', icon: IconChartBar },
-  { href: '/todoist-account', label: 'Todoist Account', icon: IconUser },
+  {
+    href: '/task-analytics',
+    label: 'Task Analytics',
+    icon: IconChartPieFilled,
+  },
+  { href: '/', label: 'Today', icon: IconCalendarFilled },
+  { href: '/insights', label: 'Insights', icon: IconBulbFilled },
+  { href: '/planning', label: 'Planning', icon: IconClipboardFilled },
+  { href: '/analytics', label: 'Analytics', icon: IconChartAreaFilled },
+  { href: '/todoist-account', label: 'Todoist Account', icon: IconUserFilled },
   { href: '/ai-insights', label: 'AI Insights', icon: IconBrain },
-  { href: '/changelog', label: 'Changelog', icon: IconFileText },
-  { href: '/settings', label: 'Settings', icon: IconSettings },
+  { href: '/changelog', label: 'Changelog', icon: IconFileTextFilled },
+  { href: '/settings', label: 'Settings', icon: IconSettingsFilled },
 ] as const;
 
 const Sidebar = () => {
