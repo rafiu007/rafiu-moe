@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
+  IconMenu2,
   IconCalendar, 
   IconBulb, 
   IconClipboardList, 
@@ -28,18 +29,21 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="w-[15%] min-w-[200px] bg-white h-screen flex flex-col shadow-sm">
-      {/* Logo/Brand */}
+    <aside className="w-[15%] min-w-[200px] bg-gray-100 h-screen flex flex-col">
+      {/* Menu Icon */}
       <div className="p-4">
-        <div className="bg-red-500 text-white px-4 py-2 rounded-lg">
-          <h1 className="text-lg font-bold">
-            Task Analytics
-          </h1>
-        </div>
+        <IconMenu2 size={20} className="text-gray-600" />
+      </div>
+
+      {/* Task Analytics Header */}
+      <div className="bg-red-500 text-white py-3 px-4">
+        <h1 className="text-base font-semibold">
+          Task Analytics
+        </h1>
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 py-2">
+      <nav className="flex-1 py-4">
         {menuItems.map(({ href, label, icon: Icon }) => {
           const isActive = pathname === href;
           
@@ -48,10 +52,10 @@ const Sidebar = () => {
               key={href}
               href={href}
               className={`
-                flex items-center gap-3 px-4 py-3 mx-2 text-sm font-medium transition-colors rounded-lg
+                flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors
                 ${isActive 
-                  ? 'text-red-600 bg-red-50' 
-                  : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
+                  ? 'text-gray-900 bg-gray-200' 
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }
               `}
             >
